@@ -188,9 +188,10 @@
     NSLog(@"1 \n");
     for (UILocalNotification* notification in notifications)
     {
-        NSLog(@"2 \n");
+        NSLog(notification.options.id);
         NSString* fid = [NSString stringWithFormat:@"%@", notification.options.id];
-        
+        NSLog(@"2 \n");
+        NSLog(fid);
         if ([fid isEqualToString:[id stringValue]]) {
             NSLog(@"3 \n");
             return notification;
